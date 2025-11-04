@@ -29,6 +29,27 @@
         <!-- Tailwind CSS CDN -->
         <script src="https://cdn.tailwindcss.com"></script>
 
+        <!-- Google Fonts - Sansation -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Sansation:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Tailwind config for custom font -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sansation: ['"Sansation"', "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+
         <!-- Font Awesome -->
         <link
             rel="stylesheet"

@@ -7,6 +7,7 @@ use yew::prelude::*;
 pub struct HeroContent {
     pub title: String,
     pub subtitle: String,
+    pub logo: String,
 }
 
 #[derive(Deserialize, Clone, PartialEq)]
@@ -45,9 +46,9 @@ pub fn hero_section() -> Html {
 
     if *loading {
         return html! {
-            <section class="flex items-center justify-center min-h-screen bg-black text-green-400 font-mono">
+            <section class="flex items-center justify-center min-h-screen bg-green-100 font-sansation">
                 <div class="text-center">
-                    <div class="text-2xl animate-pulse">{ "Loading..." }</div>
+                    <div class="text-2xl text-gray-800 animate-pulse">{ "Loading..." }</div>
                 </div>
             </section>
         };
@@ -55,10 +56,10 @@ pub fn hero_section() -> Html {
 
     if let Some(err) = (*error).as_ref() {
         return html! {
-            <section class="flex items-center justify-center min-h-screen bg-black text-red-400 font-mono">
+            <section class="flex items-center justify-center min-h-screen bg-green-100 font-sansation">
                 <div class="text-center">
-                    <div class="text-2xl mb-4">{ "Error loading content" }</div>
-                    <div class="text-sm">{ err }</div>
+                    <div class="text-2xl text-red-600 mb-4">{ "Error loading content" }</div>
+                    <div class="text-sm text-gray-700">{ err }</div>
                 </div>
             </section>
         };
@@ -66,25 +67,28 @@ pub fn hero_section() -> Html {
 
     if let Some(hero_content) = (*content).as_ref() {
         html! {
-            <section class="flex items-center justify-center min-h-screen bg-black text-green-400 font-mono">
-                <div class="text-center px-4">
-                    <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-wider">
-                        { &hero_content.title }
-                    </h1>
-                    <p class="text-xl md:text-3xl opacity-80">
-                        { &hero_content.subtitle }
-                    </p>
-                    <div class="mt-8 text-2xl animate-pulse">
-                        { "▋" }
+            <section class="flex items-center justify-center min-h-screen bg-green-200 font-sansation">
+                <div class="flex items-center gap-8 px-4">
+                    <div class="w-32 h-32 md:w-48 md:h-48 bg-gray-800 rounded-lg flex-shrink-0 flex items-center justify-center">
+                        <i class="fas fa-terminal text-green-300 text-6xl md:text-8xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-wider text-gray-800">
+                            { &hero_content.title }
+                        </h1>
+                        <p class="text-xl md:text-3xl text-gray-700">
+                            { &hero_content.subtitle }
+                            <span class="ml-2 animate-pulse">{ "▋" }</span>
+                        </p>
                     </div>
                 </div>
             </section>
         }
     } else {
         html! {
-            <section class="flex items-center justify-center min-h-screen bg-black text-green-400 font-mono">
+            <section class="flex items-center justify-center min-h-screen bg-green-100 font-sansation">
                 <div class="text-center">
-                    <div class="text-2xl">{ "No content available" }</div>
+                    <div class="text-2xl text-gray-800">{ "No content available" }</div>
                 </div>
             </section>
         }

@@ -3,3 +3,4 @@
 hero:
   title: "iTMageLAB"
   subtitle: "Семенов Андрей Владимирович"
+  logo: "/static/logo.png"
