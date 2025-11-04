@@ -1,0 +1,23 @@
+[build]
+target = "index.html"
+release = false
+dist = "dist"
+
+[watch]
+# Игнорировать временные файлы и папки
+ignore = [
+  "dist",
+  "target",
+  ".git",
+  ".DS_Store",
+  "*~",
+  "*.swp",
+  "*.swo",
+  ".*.sw?",
+  "*.tmp",
+  "*.bak",
+]
+
+[serve]
+address = "0.0.0.0"
+port = 8080
