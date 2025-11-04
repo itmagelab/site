@@ -11,12 +11,23 @@ pub struct HeroContent {
 }
 
 #[derive(Deserialize, Clone, PartialEq)]
-pub struct Content {
+pub struct LangContent {
     pub hero: HeroContent,
 }
 
+#[derive(Deserialize, Clone, PartialEq)]
+pub struct Content {
+    pub ru: LangContent,
+    pub en: LangContent,
+}
+
+#[derive(Properties, PartialEq)]
+pub struct Props {
+    pub language: String,
+}
+
 #[function_component(HeroSection)]
-pub fn hero_section() -> Html {
+pub fn hero_section(props: &Props) -> Html {
     let content = use_state(|| None::<HeroContent>);
     let error = use_state(|| None::<String>);
     let loading = use_state(|| true);
@@ -27,11 +38,17 @@ pub fn hero_section() -> Html {
         let error = error.clone();
         let loading = loading.clone();
 
-        use_effect_with((), move |_| {
+        let language = props.language.clone();
+        use_effect_with(props.language.clone(), move |_| {
             spawn_local(async move {
-                match load_content().await {
+                match load_content(&language).await {
                     Ok(data) => {
-                        content.set(Some(data.hero));
+                        let hero_content = if language == "ru" {
+                            data.ru.hero
+                        } else {
+                            data.en.hero
+                        };
+                        content.set(Some(hero_content));
                         loading.set(false);
                     }
                     Err(e) => {
@@ -95,7 +112,7 @@ pub fn hero_section() -> Html {
     }
 }
 
-async fn load_content() -> Result<Content, String> {
+async fn load_content(_language: &str) -> Result<Content, String> {
     let response = Request::get("/static/content.yaml")
         .send()
         .await

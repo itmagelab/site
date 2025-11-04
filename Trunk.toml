@@ -7,5 +7,5 @@ dist = "dist"
 ignore = ["dist", "target", ".git"]
 
 [serve]
-address = "0.0.0.0"
+addresses = ["0.0.0.0"]
 port = 8080

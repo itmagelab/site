@@ -1,29 +1,59 @@
 # Контент для сайта iTMageLAB
 
-hero:
-  title: "iTMageLAB"
-  subtitle: "Семенов Андрей Владимирович"
-  logo: "/static/logo.png"
+ru:
+  hero:
+    title: "iTMageLAB"
+    subtitle: "Семенов Андрей Владимирович"
+    logo: "/static/logo.png"
 
-about:
-  photo: "/static/photo.jpg"
-  title: "Обо мне"
-  description: "Senior DevOps, SRE с большим опытом работы в IT-индустрии. Специализируюсь на администрировании Linux систем, автоматизации процессов и построении надежной инфраструктуры."
-  skills:
-    - "15+ лет опыта в администрировании Linux и UNIX систем"
-    - "Настройка и поддержка сложных высоконагруженных систем"
-    - "Автоматизация процессов развертывания и CI/CD"
-    - "Мониторинг, логирование и обеспечение отказоустойчивости"
-  work_experience:
-    - year: "2020-2024"
-      position: "Senior DevOps Engineer"
-      company: "Tech Company Inc."
-      description: "Руководство командой DevOps, проектирование и внедрение CI/CD процессов, миграция инфраструктуры в облако, автоматизация развертывания."
-    - year: "2017-2020"
-      position: "DevOps Engineer"
-      company: "IT Solutions Ltd."
-      description: "Администрирование Linux серверов, настройка мониторинга и логирования, автоматизация рутинных задач, поддержка production окружения."
-    - year: "2012-2017"
-      position: "System Administrator"
-      company: "Digital Services Co."
-      description: "Администрирование серверной инфраструктуры, настройка сетевого оборудования, обеспечение информационной безопасности, техническая поддержка."
+  about:
+    photo: "/static/photo.jpg"
+    title: "Обо мне"
+    description: "Senior DevOps, SRE с большим опытом работы в IT-индустрии. Специализируюсь на администрировании Linux систем, автоматизации процессов и построении надежной инфраструктуры."
+    skills:
+      - "15+ лет опыта в администрировании Linux и UNIX систем"
+      - "Настройка и поддержка сложных высоконагруженных систем"
+      - "Автоматизация процессов развертывания и CI/CD"
+      - "Мониторинг, логирование и обеспечение отказоустойчивости"
+    work_experience:
+      - year: "2020-2024"
+        position: "Senior DevOps Engineer"
+        company: "Tech Company Inc."
+        description: "Руководство командой DevOps, проектирование и внедрение CI/CD процессов, миграция инфраструктуры в облако, автоматизация развертывания."
+      - year: "2017-2020"
+        position: "DevOps Engineer"
+        company: "IT Solutions Ltd."
+        description: "Администрирование Linux серверов, настройка мониторинга и логирования, автоматизация рутинных задач, поддержка production окружения."
+      - year: "2012-2017"
+        position: "System Administrator"
+        company: "Digital Services Co."
+        description: "Администрирование серверной инфраструктуры, настройка сетевого оборудования, обеспечение информационной безопасности, техническая поддержка."
+
+en:
+  hero:
+    title: "iTMageLAB"
+    subtitle: "Andrey Semenov"
+    logo: "/static/logo.png"
+
+  about:
+    photo: "/static/photo.jpg"
+    title: "About Me"
+    description: "Senior DevOps, SRE with extensive experience in the IT industry. Specializing in Linux system administration, process automation, and building reliable infrastructure."
+    skills:
+      - "15+ years of experience in Linux and UNIX system administration"
+      - "Configuration and support of complex high-load systems"
+      - "Deployment process automation and CI/CD"
+      - "Monitoring, logging, and ensuring fault tolerance"
+    work_experience:
+      - year: "2020-2024"
+        position: "Senior DevOps Engineer"
+        company: "Tech Company Inc."
+        description: "Leading DevOps team, designing and implementing CI/CD processes, migrating infrastructure to cloud, deployment automation."
+      - year: "2017-2020"
+        position: "DevOps Engineer"
+        company: "IT Solutions Ltd."
+        description: "Linux server administration, monitoring and logging setup, automation of routine tasks, production environment support."
+      - year: "2012-2017"
+        position: "System Administrator"
+        company: "Digital Services Co."
+        description: "Server infrastructure administration, network equipment configuration, information security, technical support."

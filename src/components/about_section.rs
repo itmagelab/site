@@ -21,12 +21,23 @@ pub struct AboutContent {
 }
 
 #[derive(Deserialize, Clone, PartialEq)]
-pub struct Content {
+pub struct LangContent {
     pub about: AboutContent,
 }
 
+#[derive(Deserialize, Clone, PartialEq)]
+pub struct Content {
+    pub ru: LangContent,
+    pub en: LangContent,
+}
+
+#[derive(Properties, PartialEq)]
+pub struct Props {
+    pub language: String,
+}
+
 #[function_component(AboutSection)]
-pub fn about_section() -> Html {
+pub fn about_section(props: &Props) -> Html {
     let content = use_state(|| None::<AboutContent>);
     let error = use_state(|| None::<String>);
     let loading = use_state(|| true);
@@ -37,11 +48,17 @@ pub fn about_section() -> Html {
         let error = error.clone();
         let loading = loading.clone();
 
-        use_effect_with((), move |_| {
+        let language = props.language.clone();
+        use_effect_with(props.language.clone(), move |_| {
             spawn_local(async move {
-                match load_content().await {
+                match load_content(&language).await {
                     Ok(data) => {
-                        content.set(Some(data.about));
+                        let about_content = if language == "ru" {
+                            data.ru.about
+                        } else {
+                            data.en.about
+                        };
+                        content.set(Some(about_content));
                         loading.set(false);
                     }
                     Err(e) => {
@@ -81,12 +98,7 @@ pub fn about_section() -> Html {
                 <div class="max-w-6xl mx-auto w-full">
                     <div class="bg-green-200 rounded-lg p-8 md:p-12 shadow-lg">
                         <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start mb-12">
-                            // Фото слева
-                            <div class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-gray-800 rounded-lg flex-shrink-0 flex items-center justify-center">
-                                <i class="fas fa-user text-green-300 text-6xl sm:text-7xl md:text-8xl"></i>
-                            </div>
-
-                            // Текст справа
+                            // Текст слева
                             <div class="flex-1 text-center md:text-left">
                                 <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-gray-800">
                                     { &about_content.title }
@@ -106,6 +118,11 @@ pub fn about_section() -> Html {
                                         }).collect::<Html>()
                                     }
                                 </ul>
+                            </div>
+
+                            // Фото справа
+                            <div class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-gray-800 rounded-lg flex-shrink-0 flex items-center justify-center">
+                                <i class="fas fa-user text-green-300 text-6xl sm:text-7xl md:text-8xl"></i>
                             </div>
                         </div>
 
@@ -154,7 +171,7 @@ pub fn about_section() -> Html {
     }
 }
 
-async fn load_content() -> Result<Content, String> {
+async fn load_content(_language: &str) -> Result<Content, String> {
     let response = Request::get("/static/content.yaml")
         .send()
         .await
