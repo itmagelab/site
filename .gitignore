@@ -1,1 +1,36 @@
 /target
+/dist
+.DS_Store
+
+# Временные файлы редакторов
+*~
+*.swp
+*.swo
+.*.sw?
+*.tmp
+*.bak
+*.un~
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Emacs
+\#*\#
+.\#*
+
+# Резервные копии
+*.orig
+*.backup
+
+# Системные файлы
+Thumbs.db
+desktop.ini
+
+# Служебные файлы проекта
+.nvim-config-fix.lua
+QUICK-FIX.md
