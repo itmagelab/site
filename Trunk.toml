@@ -4,19 +4,7 @@ release = false
 dist = "dist"
 
 [watch]
-# Игнорировать временные файлы и папки
-ignore = [
-  "dist",
-  "target",
-  ".git",
-  ".DS_Store",
-  "*~",
-  "*.swp",
-  "*.swo",
-  ".*.sw?",
-  "*.tmp",
-  "*.bak",
-]
+ignore = ["dist", "target", ".git"]
 
 [serve]
 address = "0.0.0.0"
