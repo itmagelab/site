@@ -64,6 +64,21 @@ ru:
       - name: "Ansible / Configuration Management"
         level: 80
 
+  contact:
+    title: "Контакты"
+    phone: "+7 (999) 123-45-67"
+    phone_label: "Телефон"
+    email: "contact@itmagelab.ru"
+    email_label: "Email"
+    social_title: "Социальные сети"
+    social_networks:
+      - name: "Telegram"
+        url: "https://t.me/itmagelab"
+        icon: "fab fa-telegram"
+      - name: "VK"
+        url: "https://vk.com/itmagelab"
+        icon: "fab fa-vk"
+
 en:
   hero:
     title: "iTMageLAB"
@@ -127,3 +142,18 @@ en:
         level: 85
       - name: "Ansible / Configuration Management"
         level: 80
+
+  contact:
+    title: "Contact"
+    phone: "+7 (999) 123-45-67"
+    phone_label: "Phone"
+    email: "contact@itmagelab.ru"
+    email_label: "Email"
+    social_title: "Social Networks"
+    social_networks:
+      - name: "Telegram"
+        url: "https://t.me/itmagelab"
+        icon: "fab fa-telegram"
+      - name: "VK"
+        url: "https://vk.com/itmagelab"
+        icon: "fab fa-vk"

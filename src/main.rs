@@ -2,6 +2,7 @@ use yew::prelude::*;
 
 mod components;
 use components::about_section::AboutSection;
+use components::contact_section::ContactSection;
 use components::hero_section::HeroSection;
 use components::language_switcher::LanguageSwitcher;
 use components::portfolio_section::PortfolioSection;
@@ -26,6 +27,7 @@ fn app() -> Html {
             <HeroSection language={(*language).clone()} />
             <AboutSection language={(*language).clone()} />
             <PortfolioSection language={(*language).clone()} />
+            <ContactSection language={(*language).clone()} />
         </div>
     }
 }
