@@ -29,6 +29,41 @@ ru:
         company: "Digital Services Co."
         description: "Администрирование серверной инфраструктуры, настройка сетевого оборудования, обеспечение информационной безопасности, техническая поддержка."
 
+  portfolio:
+    title: "Портфолио"
+    projects_title: "Проекты"
+    skills_title: "Технические навыки"
+    projects:
+      - name: "Миграция инфраструктуры в облако AWS"
+        description: "Полная миграция корпоративной инфраструктуры из on-premise в AWS с использованием Infrastructure as Code подхода."
+        link: null
+        technologies: ["AWS", "Terraform", "Docker", "Kubernetes", "CI/CD"]
+      - name: "Построение CI/CD конвейера"
+        description: "Разработка и внедрение автоматизированного процесса сборки, тестирования и развертывания для микросервисной архитектуры."
+        link: null
+        technologies: ["GitLab CI", "Jenkins", "Docker", "Ansible", "Python"]
+      - name: "Система мониторинга и логирования"
+        description: "Внедрение централизованной системы мониторинга и логирования для высоконагруженных приложений."
+        link: null
+        technologies: ["Prometheus", "Grafana", "ELK Stack", "Zabbix"]
+    skills:
+      - name: "Linux Administration"
+        level: 95
+      - name: "Docker & Kubernetes"
+        level: 90
+      - name: "AWS / Cloud Services"
+        level: 85
+      - name: "CI/CD (GitLab, Jenkins)"
+        level: 90
+      - name: "Terraform / IaC"
+        level: 85
+      - name: "Python / Bash"
+        level: 80
+      - name: "Monitoring (Prometheus, Grafana)"
+        level: 85
+      - name: "Ansible / Configuration Management"
+        level: 80
+
 en:
   hero:
     title: "iTMageLAB"
@@ -57,3 +92,38 @@ en:
         position: "System Administrator"
         company: "Digital Services Co."
         description: "Server infrastructure administration, network equipment configuration, information security, technical support."
+
+  portfolio:
+    title: "Portfolio"
+    projects_title: "Projects"
+    skills_title: "Technical Skills"
+    projects:
+      - name: "AWS Cloud Infrastructure Migration"
+        description: "Complete migration of corporate infrastructure from on-premise to AWS using Infrastructure as Code approach."
+        link: null
+        technologies: ["AWS", "Terraform", "Docker", "Kubernetes", "CI/CD"]
+      - name: "CI/CD Pipeline Implementation"
+        description: "Development and implementation of automated build, test, and deployment process for microservices architecture."
+        link: null
+        technologies: ["GitLab CI", "Jenkins", "Docker", "Ansible", "Python"]
+      - name: "Monitoring and Logging System"
+        description: "Implementation of centralized monitoring and logging system for high-load applications."
+        link: null
+        technologies: ["Prometheus", "Grafana", "ELK Stack", "Zabbix"]
+    skills:
+      - name: "Linux Administration"
+        level: 95
+      - name: "Docker & Kubernetes"
+        level: 90
+      - name: "AWS / Cloud Services"
+        level: 85
+      - name: "CI/CD (GitLab, Jenkins)"
+        level: 90
+      - name: "Terraform / IaC"
+        level: 85
+      - name: "Python / Bash"
+        level: 80
+      - name: "Monitoring (Prometheus, Grafana)"
+        level: 85
+      - name: "Ansible / Configuration Management"
+        level: 80

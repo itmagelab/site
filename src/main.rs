@@ -4,6 +4,7 @@ mod components;
 use components::about_section::AboutSection;
 use components::hero_section::HeroSection;
 use components::language_switcher::LanguageSwitcher;
+use components::portfolio_section::PortfolioSection;
 
 #[function_component(App)]
 fn app() -> Html {
@@ -24,6 +25,7 @@ fn app() -> Html {
             />
             <HeroSection language={(*language).clone()} />
             <AboutSection language={(*language).clone()} />
+            <PortfolioSection language={(*language).clone()} />
         </div>
     }
 }
