@@ -70,9 +70,9 @@ ru:
 
   contact:
     title: "Контакты"
-    phone: "+7 (999) 123-45-67"
+    phone: "+7 987 777 34 45"
     phone_label: "Телефон"
-    email: "contact@itmagelab.ru"
+    email: "i@itmage.ru"
     email_label: "Email"
     social_title: "Социальные сети"
     social_networks:
@@ -80,8 +80,12 @@ ru:
         url: "https://t.me/itmagelab"
         icon: "fab fa-telegram"
       - name: "VK"
-        url: "https://vk.com/itmagelab"
+        url: "https://vk.com/itmage_ru"
         icon: "fab fa-vk"
+
+  footer:
+    copyright: "© 2024 iTMageLAB. Все права защищены."
+    credits: "Created with Rust & Yew"
 
 en:
   hero:
@@ -149,9 +153,9 @@ en:
 
   contact:
     title: "Contact"
-    phone: "+7 (999) 123-45-67"
+    phone: "+7 987 777 34 45"
     phone_label: "Phone"
-    email: "contact@itmagelab.ru"
+    email: "i@itmage.ru"
     email_label: "Email"
     social_title: "Social Networks"
     social_networks:
@@ -161,3 +165,7 @@ en:
       - name: "VK"
         url: "https://vk.com/itmagelab"
         icon: "fab fa-vk"
+
+  footer:
+    copyright: "© 2024 iTMageLAB. All rights reserved."
+    credits: "Created with Rust & Yew"

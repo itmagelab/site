@@ -6,6 +6,7 @@ use components::contact_section::ContactSection;
 use components::hero_section::HeroSection;
 use components::language_switcher::LanguageSwitcher;
 use components::portfolio_section::PortfolioSection;
+use components::footer_section::FooterSection;
 
 #[function_component(App)]
 fn app() -> Html {
@@ -19,7 +20,7 @@ fn app() -> Html {
     };
 
     html! {
-        <div>
+        <div class="flex flex-col min-h-screen">
             <LanguageSwitcher
                 current_lang={(*language).clone()}
                 on_change={on_language_change}
@@ -28,6 +29,7 @@ fn app() -> Html {
             <AboutSection language={(*language).clone()} />
             <PortfolioSection language={(*language).clone()} />
             <ContactSection language={(*language).clone()} />
+            <FooterSection language={(*language).clone()} />
         </div>
     }
 }
