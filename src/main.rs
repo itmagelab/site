@@ -3,10 +3,10 @@ use yew::prelude::*;
 mod components;
 use components::about_section::AboutSection;
 use components::contact_section::ContactSection;
+use components::footer_section::FooterSection;
 use components::hero_section::HeroSection;
 use components::language_switcher::LanguageSwitcher;
 use components::portfolio_section::PortfolioSection;
-use components::footer_section::FooterSection;
 
 #[function_component(App)]
 fn app() -> Html {
