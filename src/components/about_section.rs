@@ -8,7 +8,7 @@ pub struct WorkExperience {
     pub year: String,
     pub position: String,
     pub company: String,
-    pub description: String,
+    pub description: Vec<String>,
 }
 
 #[derive(Deserialize, Clone, PartialEq)]
@@ -121,8 +121,12 @@ pub fn about_section(props: &Props) -> Html {
                             </div>
 
                             // Фото справа
-                            <div class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-gray-800 rounded-lg flex-shrink-0 flex items-center justify-center">
-                                <i class="fas fa-user text-green-300 text-6xl sm:text-7xl md:text-8xl"></i>
+                            <div class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 flex-shrink-0">
+                                <img
+                                    src={about_content.photo.clone()}
+                                    alt={about_content.title.clone()}
+                                    class="w-full h-full object-cover rounded-lg shadow-xl border-4 border-gray-800"
+                                />
                             </div>
                         </div>
 
@@ -146,9 +150,15 @@ pub fn about_section(props: &Props) -> Html {
                                                     <p class="text-lg sm:text-xl text-gray-700 mb-2 font-semibold">
                                                         { &exp.company }
                                                     </p>
-                                                    <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
-                                                        { &exp.description }
-                                                    </p>
+                                                    <ul class="list-disc list-inside text-base sm:text-lg text-gray-600 leading-relaxed space-y-1">
+                                                        {
+                                                            exp.description.iter().map(|desc| {
+                                                                html! {
+                                                                    <li>{ desc }</li>
+                                                                }
+                                                            }).collect::<Html>()
+                                                        }
+                                                    </ul>
                                                 </div>
                                             </div>
                                         }

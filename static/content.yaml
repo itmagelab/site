@@ -13,60 +13,92 @@ ru:
       Senior DevOps, SRE с большим опытом работы в IT-индустрии.
       Специализируюсь на администрировании Linux систем, автоматизации процессов и построении надежной инфраструктуры.
 
-      Создаю стабильные и продуктивные решения, которые не будут усложнены.
+      Создаю стабильные и продуктивные решения.
     skills:
       - "15+ лет опыта в администрировании Linux и UNIX систем"
       - "Настройка и поддержка сложных высоконагруженных систем"
       - "Автоматизация процессов развертывания и CI/CD"
       - "Мониторинг, логирование и обеспечение отказоустойчивости"
     work_experience:
-      - year: "2020-2024"
-        position: "Senior DevOps Engineer"
-        company: "Tech Company Inc."
-        description: "Руководство командой DevOps, проектирование и внедрение CI/CD процессов, миграция инфраструктуры в облако, автоматизация развертывания."
-      - year: "2017-2020"
-        position: "DevOps Engineer"
-        company: "IT Solutions Ltd."
-        description: "Администрирование Linux серверов, настройка мониторинга и логирования, автоматизация рутинных задач, поддержка production окружения."
-      - year: "2012-2017"
-        position: "System Administrator"
-        company: "Digital Services Co."
-        description: "Администрирование серверной инфраструктуры, настройка сетевого оборудования, обеспечение информационной безопасности, техническая поддержка."
+      - year: "02.2022-..."
+        position: "СТАРШИЙ СИСТЕМНЫЙ ИНЖЕНЕР"
+        company: "OOO Selectel"
+        description:
+          - "Полностью подготовил инфраструктуру для создания частного облака платформы"
+          - "Отвечаю за работу openstack сервисов. В первую очередь IaC и CI/CD."
+          - "Ввел в эксплуатацию несколько сервисов Openstack."
+          - "Спроектировал систему резервного копирования."
+          - "Запустил несколько новых регионов облака."
+          - "Мною был переписан Terraform ядра облака."
+      - year: "01.2020–02.2022"
+        position: "СИСТЕМНЫЙ ИНЖЕНЕР"
+        company: "G-Core Labs S.A."
+        description:
+          - "Отвечал за эксплуатацию работы серверного кластера Puppet, (2.5 тыс. серверов в Австралии, Южной Америке, Европе, ЮАР и России) и программных комплексов головной организации и заказчиков в СНГ, Европе и США (телекоммуникации, медицина, разработка ПО, стриминг и т.д.)."
+          - "Совместно с коллегами реализовал решение, которое позволило держать код и данные на разных уровнях безопасности. Предложил выделить отдельный слой hiera для пользовательских данных с политиками ACL."
+          - "Создал сервис по получению и обновлению сертификатов с использованием внутреннего DNS API."
+          - "Добавил новую модель работы с Git, что позволило минимизировать сбои во время релиза изменений у заказчиков. Добавили новые окружения с разными наборами серверов для проведения тестирования вносимых изменений (синтаксический анализ, политики ACL и т.д.)."
+          - "Сделал репозиторий для CentOS. Реализовал доступ к нему по всему миру через CDN компании и удаленного запуска нескольких серверов кэширования в каждой точке присутствия."
+          - "Инициировал переход на gitea, mariadb, pulp, gocd, borg."
+      - year: "01.2012-11.2019"
+        position: "СИСТЕМНЫЙ АДМИНИСТРАТОР"
+        company: "Издательство «7 дней»"
+        description:
+          - "Отвечал за администрирование и обслуживание внутренней инфраструктуры сайта 7days.ru (свыше 400 тыс. посетителей в день), оперативное реагирование на системные сбои и разработку решений для улучшения качества сервисов и помощь команде разработчиков в части настройки окружения."
+      - year: "06.2009-12.2011"
+        position: "СИСТЕМНЫЙ АДМИНИСТРАТОР"
+        company: "Softline"
+        description:
+          - "Отвечал за сопровождение комплекса ПО и оборудования для обеспечения режима работы серверов в режиме 24/7, поддержку систем виртуализации, сопровождение офисной LAN, добавление серверов и настройку простых кластеров с репликациями."
 
   portfolio:
     title: "Портфолио"
     projects_title: "Проекты"
     skills_title: "Технические навыки"
     projects:
-      - name: "Миграция инфраструктуры в облако AWS"
-        description: "Полная миграция корпоративной инфраструктуры из on-premise в AWS с использованием Infrastructure as Code подхода."
+      - name: "УЧАСТВОВАЛ В СОЗДАНИИ НОВОГО НАПРАВЛЕНИЯ КОМПАНИИ "
+        description:
+          - В организации было сформировано новое направление, которое в короткий срок должно было организовать использование основного стека компании у клиента. То есть весь стек нужно было поддерживать всего несколькими сотрудниками и научиться разбираться на уровне поддержки L2-4
+          - Для достижения этой цели был изменен подход в IaC, внедрены новые подходы для Git Flow (IaC как релизная модель с разработкой в master и стабилизированными ветками)
+          - Написан код для полного цикла CI/CD в закрытых контурах, всевозможные бастионы (джампы) и прокси-сервера обеспечивающие защищенный доступ.
+          - Были развернуты комплексы для работы с инфраструктурой и кодом (Gitlab, Nexus, Zabbix и так далее), которые позволяли обеспечить работу в инфраструктуре клиента
         link: null
-        technologies: ["AWS", "Terraform", "Docker", "Kubernetes", "CI/CD"]
-      - name: "Построение CI/CD конвейера"
-        description: "Разработка и внедрение автоматизированного процесса сборки, тестирования и развертывания для микросервисной архитектуры."
+        technologies: ["Terraform", "Docker", "Openstack", "CI/CD", "Puppet"]
+      - name: "РЕОРГАНИЗАЦИЯ КОМПАНИИ "
+        description:
+          - "В период выделения сервисного подразделения в отдельную структуру (видеостриминговая платформа, хостинг, CDN, защита от DDoS) в течение 3 мес. провел отделение 2 тыс. серверов от структуры головной организации. На текущий момент в зоне ответственности: 2,5 тыс. серверов."
+          - Настроил серверный кластер из 10 Puppet. Ввел в экплуатацию вместо Bare-серверов виртуальные машины с возможностью горизонтального расширения, что сократило затраты на содержание серверов.
+          - Развернул и обеспечил поддержку системы биллинга librenms.
+          - Настроил взаимосвязь всех частей сервиса (Puppet, БД postgres с репликацией, Nginx с кэшированием, сервер для генерации сертификатов, Memcached для хранения оперативных данных).
+          - Реализовал перенос всей инфраструктуры из зоны DNS головной организации в новую структуру в условиях ограничения доступа к сети головной компании.
+          - Интегрировал систему резервного копирования, рассчитал нагрузку и объем данных (передача и хранение).
         link: null
-        technologies: ["GitLab CI", "Jenkins", "Docker", "Ansible", "Python"]
-      - name: "Система мониторинга и логирования"
-        description: "Внедрение централизованной системы мониторинга и логирования для высоконагруженных приложений."
+        technologies: ["GitLab CI", "Puppet", "Docker", "WMWare"]
+      - name: "МАСШТАБИРОВАНИЕ ИНТЕРНЕТ-РЕСУРСА"
+        description:
+          - "Провел ряд технологических улучшений, которые обеспечили стабильную работу рекламного сайта 7days.ru и позволили масштабировать в 5 раз число посетителей: На старте - 100 тыс/день, в итоге - ~500 тыс/день."
+          - Полностью пересобрал парк из 50 серверов c RedHat на CentOS, решил проблему несоблюдения базовых принципов Linux.
+          - Предложил заменить сервер БД в проекте, настроил mysql сервер под работу с высокими нагрузками.
+          - Инициировал переход на непрерывную интеграцию изменений вместо релизной.
         link: null
-        technologies: ["Prometheus", "Grafana", "ELK Stack", "Zabbix"]
+        technologies: ["Salt", "Prometheus", "Zabbix"]
     skills:
       - name: "Linux Administration"
         level: 95
-      - name: "Docker & Kubernetes"
-        level: 90
-      - name: "AWS / Cloud Services"
-        level: 85
-      - name: "CI/CD (GitLab, Jenkins)"
-        level: 90
+      - name: "Docker"
+        level: 95
+      - name: "Cloud Services"
+        level: 95
+      - name: "CI/CD (GitLab)"
+        level: 95
       - name: "Terraform / IaC"
-        level: 85
-      - name: "Python / Bash"
-        level: 80
+        level: 95
+      - name: "RUST / Ruby / Bash"
+        level: 90
       - name: "Monitoring (Prometheus, Grafana)"
-        level: 85
-      - name: "Ansible / Configuration Management"
         level: 80
+      - name: "Ansible / Configuration Management"
+        level: 75
 
   contact:
     title: "Контакты"
@@ -103,53 +135,85 @@ en:
       - "Deployment process automation and CI/CD"
       - "Monitoring, logging, and ensuring fault tolerance"
     work_experience:
-      - year: "2020-2024"
-        position: "Senior DevOps Engineer"
-        company: "Tech Company Inc."
-        description: "Leading DevOps team, designing and implementing CI/CD processes, migrating infrastructure to cloud, deployment automation."
-      - year: "2017-2020"
-        position: "DevOps Engineer"
-        company: "IT Solutions Ltd."
-        description: "Linux server administration, monitoring and logging setup, automation of routine tasks, production environment support."
-      - year: "2012-2017"
-        position: "System Administrator"
-        company: "Digital Services Co."
-        description: "Server infrastructure administration, network equipment configuration, information security, technical support."
+      - year: "02.2022-..."
+        position: "SENIOR SYSTEM ENGINEER"
+        company: "OOO Selectel"
+        description:
+          - "Fully prepared the infrastructure for creating a private cloud platform"
+          - "Responsible for the operation of OpenStack services. Primarily IaC and CI/CD."
+          - "Commissioned several OpenStack services."
+          - "Designed the backup system."
+          - "Launched several new cloud regions."
+          - "Rewrote the Terraform code for the cloud core."
+      - year: "01.2020–02.2022"
+        position: "SYSTEM ENGINEER"
+        company: "G-Core Labs S.A."
+        description:
+          - "Responsible for the operation of the Puppet server cluster (2.5k servers in Australia, South America, Europe, South Africa, and Russia) and software complexes of the headquarters and customers in the CIS, Europe, and USA (telecommunications, medicine, software development, streaming, etc.)."
+          - "Together with colleagues, implemented a solution that allowed keeping code and data at different security levels. Proposed isolating a separate hiera layer for user data with ACL policies."
+          - "Created a service for obtaining and updating certificates using the internal DNS API."
+          - "Added a new Git workflow model, minimizing failures during change releases for customers. Added new environments with different server sets for testing changes (syntax analysis, ACL policies, etc.)."
+          - "Created a repository for CentOS. Implemented global access via the company's CDN and remote launch of several caching servers in each point of presence."
+          - "Initiated the migration to Gitea, MariaDB, Pulp, GoCD, Borg."
+      - year: "01.2012-11.2019"
+        position: "SYSTEM ADMINISTRATOR"
+        company: "7 Days Publishing House"
+        description:
+          - "Responsible for administration and maintenance of the internal infrastructure of 7days.ru (over 400k daily visitors), rapid response to system failures, and development of solutions to improve service quality and assist the development team with environment configuration."
+      - year: "06.2009-12.2011"
+        position: "SYSTEM ADMINISTRATOR"
+        company: "Softline"
+        description:
+          - "Responsible for maintaining the software and hardware complex to ensure 24/7 server operation, virtualization system support, office LAN maintenance, adding servers, and configuring simple clusters with replication."
 
   portfolio:
     title: "Portfolio"
     projects_title: "Projects"
     skills_title: "Technical Skills"
     projects:
-      - name: "AWS Cloud Infrastructure Migration"
-        description: "Complete migration of corporate infrastructure from on-premise to AWS using Infrastructure as Code approach."
+      - name: "PARTICIPATED IN CREATING A NEW COMPANY DIRECTION"
+        description:
+          - "A new direction was formed in the organization, which had to organize the use of the company's main stack for the client in a short time. That is, the entire stack had to be supported by only a few employees and learn to understand at the L2-4 support level."
+          - "To achieve this goal, the approach to IaC was changed, new approaches for Git Flow were introduced (IaC as a release model with development in master and stabilized branches)."
+          - "Code was written for the full CI/CD cycle in closed loops, various bastions (jumps) and proxy servers ensuring secure access."
+          - "Complexes for working with infrastructure and code (Gitlab, Nexus, Zabbix, etc.) were deployed, which allowed ensuring work in the client's infrastructure."
         link: null
-        technologies: ["AWS", "Terraform", "Docker", "Kubernetes", "CI/CD"]
-      - name: "CI/CD Pipeline Implementation"
-        description: "Development and implementation of automated build, test, and deployment process for microservices architecture."
+        technologies: ["Terraform", "Docker", "Openstack", "CI/CD", "Puppet"]
+      - name: "COMPANY REORGANIZATION"
+        description:
+          - "During the separation of the service division into a separate structure (video streaming platform, hosting, CDN, DDoS protection), I separated 2k servers from the head organization's structure within 3 months. Currently responsible for 2.5k servers."
+          - "Configured a server cluster of 10 Puppets. Commissioned virtual machines instead of Bare servers with the possibility of horizontal scaling, which reduced server maintenance costs."
+          - "Deployed and ensured support for the librenms billing system."
+          - "Configured the interconnection of all parts of the service (Puppet, Postgres DB with replication, Nginx with caching, certificate generation server, Memcached for storing operational data)."
+          - "Implemented the transfer of the entire infrastructure from the head organization's DNS zone to a new structure under conditions of limited access to the head company's network."
+          - "Integrated a backup system, calculated the load and data volume (transfer and storage)."
         link: null
-        technologies: ["GitLab CI", "Jenkins", "Docker", "Ansible", "Python"]
-      - name: "Monitoring and Logging System"
-        description: "Implementation of centralized monitoring and logging system for high-load applications."
+        technologies: ["GitLab CI", "Puppet", "Docker", "WMWare"]
+      - name: "SCALING AN INTERNET RESOURCE"
+        description:
+          - "Conducted a number of technological improvements that ensured the stable operation of the 7days.ru advertising site and allowed scaling the number of visitors by 5 times: At the start - 100k/day, in the end - ~500k/day."
+          - "Completely reassembled a fleet of 50 servers from RedHat to CentOS, solved the problem of non-compliance with basic Linux principles."
+          - "Proposed replacing the DB server in the project, configured the mysql server for high loads."
+          - "Initiated the transition to continuous integration of changes instead of release-based."
         link: null
-        technologies: ["Prometheus", "Grafana", "ELK Stack", "Zabbix"]
+        technologies: ["Salt", "Prometheus", "Zabbix"]
     skills:
       - name: "Linux Administration"
         level: 95
-      - name: "Docker & Kubernetes"
-        level: 90
-      - name: "AWS / Cloud Services"
-        level: 85
-      - name: "CI/CD (GitLab, Jenkins)"
-        level: 90
+      - name: "Docker"
+        level: 95
+      - name: "Cloud Services"
+        level: 95
+      - name: "CI/CD (GitLab)"
+        level: 95
       - name: "Terraform / IaC"
-        level: 85
-      - name: "Python / Bash"
-        level: 80
+        level: 95
+      - name: "RUST / Ruby / Bash"
+        level: 90
       - name: "Monitoring (Prometheus, Grafana)"
-        level: 85
-      - name: "Ansible / Configuration Management"
         level: 80
+      - name: "Ansible / Configuration Management"
+        level: 75
 
   contact:
     title: "Contact"

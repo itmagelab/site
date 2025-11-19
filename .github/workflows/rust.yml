@@ -1,0 +1,61 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+# This workflow will download a prebuilt Ruby version, install dependencies and run tests with Rake
+# For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
+
+name: CI - Security & Tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["master", "test/*"]
+    tags: ["v*.*.*"]
+  pull_request:
+    branches: ["master"]
+
+permissions:
+  contents: read
+
+env:
+  WERTER_DATABASE_PASSWORD: itcast
+  RUST_LOG: debug
+
+jobs:
+  build-and-scan:
+    runs-on: self-hosted
+
+    steps:
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+
+      - name: Cache cargo
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Cargo fmt
+        run: cargo fmt -- --check
+
+      - name: Run tests
+        run: cargo test --all
+
+      - name: Clippy
+        run: cargo clippy --all-targets --all-features -- -D warnings
+
+      # - name: Install cargo-audit
+      #   run: cargo install cargo-audit
+      #
+      # - name: Run cargo-audit
+      #   run: cargo audit
+
+      # - name: Install cargo-deny
+      #   run: cargo install cargo-deny
+      #
+      # - name: Run cargo-deny
+      #   run: cargo deny check

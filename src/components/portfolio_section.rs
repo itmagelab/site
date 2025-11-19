@@ -6,7 +6,7 @@ use yew::prelude::*;
 #[derive(Deserialize, Clone, PartialEq)]
 pub struct Project {
     pub name: String,
-    pub description: String,
+    pub description: Vec<String>,
     pub link: Option<String>,
     pub technologies: Vec<String>,
 }
@@ -136,9 +136,15 @@ pub fn portfolio_section(props: &Props) -> Html {
                                                     }
                                                 }
                                             </div>
-                                            <p class="text-lg text-gray-700 mb-4">
-                                                { &project.description }
-                                            </p>
+                                            <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+                                                {
+                                                    project.description.iter().map(|desc| {
+                                                        html! {
+                                                            <li>{ desc }</li>
+                                                        }
+                                                    }).collect::<Html>()
+                                                }
+                                            </ul>
                                             <div class="flex flex-wrap gap-2">
                                                 {
                                                     project.technologies.iter().map(|tech| {
