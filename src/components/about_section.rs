@@ -17,6 +17,7 @@ pub struct AboutContent {
     pub title: String,
     pub description: String,
     pub skills: Vec<String>,
+    pub work_experience_title: String,
     pub work_experience: Vec<WorkExperience>,
 }
 
@@ -133,7 +134,7 @@ pub fn about_section(props: &Props) -> Html {
                         // Опыт работы по годам
                         <div class="border-t-2 border-gray-800 pt-8">
                             <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-gray-800 text-center md:text-left">
-                                { "Опыт работы" }
+                                { &about_content.work_experience_title }
                             </h3>
                             <div class="space-y-6">
                                 {

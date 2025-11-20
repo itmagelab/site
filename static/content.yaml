@@ -19,6 +19,7 @@ ru:
       - "Настройка и поддержка сложных высоконагруженных систем"
       - "Автоматизация процессов развертывания и CI/CD"
       - "Мониторинг, логирование и обеспечение отказоустойчивости"
+    work_experience_title: "Опыт работы"
     work_experience:
       - year: "02.2022-..."
         position: "СТАРШИЙ СИСТЕМНЫЙ ИНЖЕНЕР"
@@ -134,6 +135,7 @@ en:
       - "Configuration and support of complex high-load systems"
       - "Deployment process automation and CI/CD"
       - "Monitoring, logging, and ensuring fault tolerance"
+    work_experience_title: "Work Experience"
     work_experience:
       - year: "02.2022-..."
         position: "SENIOR SYSTEM ENGINEER"

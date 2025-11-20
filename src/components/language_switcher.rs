@@ -1,14 +1,16 @@
 use yew::prelude::*;
+use yew_router::prelude::*;
+use crate::Route;
 
 #[derive(Properties, PartialEq)]
 pub struct Props {
     pub current_lang: String,
-    pub on_change: Callback<String>,
 }
 
 #[function_component(LanguageSwitcher)]
 pub fn language_switcher(props: &Props) -> Html {
     let is_open = use_state(|| false);
+    let navigator = use_navigator().unwrap();
 
     let toggle_open = {
         let is_open = is_open.clone();
@@ -18,19 +20,19 @@ pub fn language_switcher(props: &Props) -> Html {
     };
 
     let on_ru = {
-        let on_change = props.on_change.clone();
+        let navigator = navigator.clone();
         let is_open = is_open.clone();
         Callback::from(move |_| {
-            on_change.emit("ru".to_string());
+            navigator.push(&Route::Ru);
             is_open.set(false);
         })
     };
 
     let on_en = {
-        let on_change = props.on_change.clone();
+        let navigator = navigator.clone();
         let is_open = is_open.clone();
         Callback::from(move |_| {
-            on_change.emit("en".to_string());
+            navigator.push(&Route::En);
             is_open.set(false);
         })
     };
