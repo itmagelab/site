@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["static/v*.*.*"]
+    branches: ["static/v*.*.*", "master"]
     tags: ["v*.*.*"]
 
   # Allows you to run this workflow manually from the Actions tab
