@@ -1,10 +1,10 @@
-use yew::prelude::*;
 use crate::components::about_section::AboutSection;
 use crate::components::contact_section::ContactSection;
 use crate::components::footer_section::FooterSection;
 use crate::components::hero_section::HeroSection;
 use crate::components::language_switcher::LanguageSwitcher;
 use crate::components::portfolio_section::PortfolioSection;
+use yew::prelude::*;
 
 #[derive(Properties, PartialEq)]
 pub struct HomeProps {
