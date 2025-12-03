@@ -84,19 +84,21 @@ pub fn hero_section(props: &Props) -> Html {
 
     if let Some(hero_content) = (*content).as_ref() {
         html! {
-            <section class="flex items-center justify-center min-h-screen bg-green-200 font-sansation p-4">
-                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8 w-full max-w-6xl">
-                    <div class="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 bg-gray-800 rounded-lg flex-shrink-0 flex items-center justify-center">
-                        <i class="fas fa-terminal text-green-300 text-4xl sm:text-5xl md:text-8xl"></i>
-                    </div>
-                    <div class="text-center md:text-left">
-                        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6 tracking-wider text-gray-800 break-words">
-                            { &hero_content.title }
-                        </h1>
-                        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 break-words">
-                            { &hero_content.subtitle }
-                            <span class="ml-2 animate-pulse">{ "▋" }</span>
-                        </p>
+            <section class="bg-green-200 font-sansation py-6 px-4 shadow-md">
+                <div class="flex flex-row items-center justify-between gap-6 w-full max-w-6xl mx-auto">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 rounded-lg flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-terminal text-green-300 text-2xl sm:text-3xl"></i>
+                        </div>
+                        <div class="text-left">
+                            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider text-gray-800">
+                                { &hero_content.title }
+                            </h1>
+                            <p class="text-sm sm:text-base md:text-lg text-gray-700">
+                                { &hero_content.subtitle }
+                                <span class="ml-2 animate-pulse">{ "▋" }</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
