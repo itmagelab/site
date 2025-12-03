@@ -83,11 +83,21 @@ ru:
           - Инициировал переход на непрерывную интеграцию изменений вместо релизной.
         link: null
         technologies: ["Salt", "Prometheus", "Zabbix"]
+      - name: "ПЕТ-ПРОЕКТЫ ДЛЯ РАЗВИТИЯ НАВЫКОВ"
+        description:
+          - <a href="https://github.com/itmagelab/baza" target="_blank" class="text-green-800 hover:underline font-bold">Baza</a> — мой первый собственный проект, созданный как современная альтернатива pass — консольному менеджеру паролей.
+            Разрабатывая Baza, я глубоко изучил Rust и реализовал функциональность, которая мне всегда не хватала в оригинальном инструменте,
+            уделив особое внимание безопасности, удобству использования и качеству кода.
+          - <a href="https://kubcoin.ru" target="_blank" class="text-green-800 hover:underline font-bold">https://kubcoin.ru</a> — закрытый семейный проект, который я разработал для своей жены.
+            Он стал для меня важным опытом, позволившим выйти за рамки низкоуровневой разработки и освоить создание полноценных
+            пользовательских сервисов — от архитектуры до фронтенда.
+        link: null
+        technologies: ["RUST", "Caddy", "Compose", "PostgreSQL", "ReDB"]
     skills:
       - name: "Linux Administration"
-        level: 95
+        level: 98
       - name: "Docker"
-        level: 95
+        level: 98
       - name: "Cloud Services"
         level: 95
       - name: "CI/CD (GitLab)"
@@ -97,9 +107,9 @@ ru:
       - name: "RUST / Ruby / Bash"
         level: 90
       - name: "Monitoring (Prometheus, Grafana)"
-        level: 80
-      - name: "Ansible / Configuration Management"
-        level: 75
+        level: 85
+      - name: "Ansible / Puppet / Configuration Management"
+        level: 95
 
   contact:
     title: "Контакты"
@@ -199,11 +209,22 @@ en:
           - "Initiated the transition to continuous integration of changes instead of release-based."
         link: null
         technologies: ["Salt", "Prometheus", "Zabbix"]
+      - name: "PET PROJECTS FOR SKILL DEVELOPMENT"
+        description:
+          - <a href="https://github.com/itmagelab/baza" target="_blank" class="text-green-800 hover:underline font-bold">Baza</a> — my first personal project, created as a modern alternative to pass — a console-based password manager.
+            While developing Baza, I gained deep experience with Rust and implemented the functionality I always felt was missing in the original tool,
+            paying special attention to security, usability, and code quality.
+          - <a href="https://kubcoin.ru" target="_blank" class="text-green-800 hover:underline font-bold">https://kubcoin.ru</a> — a private family project that I developed for my wife.
+            It became a valuable experience that allowed me to go beyond low-level development and master creating full-fledged
+            user-facing services — from architecture to frontend.
+        link: null
+        technologies: ["RUST", "Caddy", "Compose", "PostgreSQL", "ReDB"]
+
     skills:
       - name: "Linux Administration"
-        level: 95
+        level: 98
       - name: "Docker"
-        level: 95
+        level: 98
       - name: "Cloud Services"
         level: 95
       - name: "CI/CD (GitLab)"
@@ -213,9 +234,9 @@ en:
       - name: "RUST / Ruby / Bash"
         level: 90
       - name: "Monitoring (Prometheus, Grafana)"
-        level: 80
-      - name: "Ansible / Configuration Management"
-        level: 75
+        level: 85
+      - name: "Ansible / Puppet / Configuration Management"
+        level: 95
 
   contact:
     title: "Contact"

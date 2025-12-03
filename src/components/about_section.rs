@@ -155,7 +155,7 @@ pub fn about_section(props: &Props) -> Html {
                                                         {
                                                             exp.description.iter().map(|desc| {
                                                                 html! {
-                                                                    <li>{ desc }</li>
+                                                                    <li>{ Html::from_html_unchecked(AttrValue::from(desc.clone())) }</li>
                                                                 }
                                                             }).collect::<Html>()
                                                         }

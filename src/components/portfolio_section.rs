@@ -140,7 +140,7 @@ pub fn portfolio_section(props: &Props) -> Html {
                                                 {
                                                     project.description.iter().map(|desc| {
                                                         html! {
-                                                            <li>{ desc }</li>
+                                                            <li>{ Html::from_html_unchecked(AttrValue::from(desc.clone())) }</li>
                                                         }
                                                     }).collect::<Html>()
                                                 }
