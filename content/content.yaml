@@ -85,10 +85,10 @@ ru:
         technologies: ["Salt", "Linux", "Zabbix"]
       - name: "ПЕТ-ПРОЕКТЫ ДЛЯ РАЗВИТИЯ НАВЫКОВ"
         description:
-          - <a href="https://github.com/itmagelab/baza" target="_blank" class="text-green-800 hover:underline font-bold">Baza</a> — мой первый собственный проект, созданный как современная альтернатива pass — консольному менеджеру паролей.
+          - <a href="https://github.com/itmagelab/baza" target="_blank" class="inline-flex items-center px-1.5 py-0.5 bg-emerald-600 text-white text-sm rounded hover:bg-emerald-700 transition-colors font-bold no-underline shadow-sm"><i class="fas fa-external-link-alt mr-2"></i>Baza</a> — мой первый собственный проект, созданный как современная альтернатива pass — консольному менеджеру паролей.
             Разрабатывая Baza, я глубоко изучил Rust и реализовал функциональность, которая мне всегда не хватала в оригинальном инструменте,
             уделив особое внимание безопасности, удобству использования и качеству кода.
-          - <a href="https://kubcoin.ru" target="_blank" class="text-green-800 hover:underline font-bold">https://kubcoin.ru</a> — закрытый семейный проект, который я разработал для своей жены.
+          - <a href="https://kubcoin.ru" target="_blank" class="inline-flex items-center px-1.5 py-0.5 bg-emerald-600 text-white text-sm rounded hover:bg-emerald-700 transition-colors font-bold no-underline shadow-sm"><i class="fas fa-external-link-alt mr-2"></i>Kubcoin</a> — закрытый семейный проект, который я разработал для своей жены.
             Он стал для меня важным опытом, позволившим выйти за рамки низкоуровневой разработки и освоить создание полноценных
             пользовательских сервисов — от архитектуры до фронтенда.
         link: null
@@ -211,10 +211,10 @@ en:
         technologies: ["Salt", "Linux", "Zabbix"]
       - name: "PET PROJECTS FOR SKILL DEVELOPMENT"
         description:
-          - <a href="https://github.com/itmagelab/baza" target="_blank" class="text-green-800 hover:underline font-bold">Baza</a> — my first personal project, created as a modern alternative to pass — a console-based password manager.
+          - <a href="https://github.com/itmagelab/baza" target="_blank" class="inline-flex items-center px-1.5 py-0.5 bg-emerald-600 text-white text-sm rounded hover:bg-emerald-700 transition-colors font-bold no-underline shadow-sm"><i class="fas fa-external-link-alt mr-2"></i>Baza</a> — my first personal project, created as a modern alternative to pass — a console-based password manager.
             While developing Baza, I gained deep experience with Rust and implemented the functionality I always felt was missing in the original tool,
             paying special attention to security, usability, and code quality.
-          - <a href="https://kubcoin.ru" target="_blank" class="text-green-800 hover:underline font-bold">https://kubcoin.ru</a> — a private family project that I developed for my wife.
+          - <a href="https://kubcoin.ru" target="_blank" class="inline-flex items-center px-1.5 py-0.5 bg-emerald-600 text-white text-sm rounded hover:bg-emerald-700 transition-colors font-bold no-underline shadow-sm"><i class="fas fa-external-link-alt mr-2"></i>Kubcoin</a> — a private family project that I developed for my wife.
             It became a valuable experience that allowed me to go beyond low-level development and master creating full-fledged
             user-facing services — from architecture to frontend.
         link: null

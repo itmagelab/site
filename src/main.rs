@@ -2,6 +2,7 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 
 mod components;
+mod content;
 mod pages;
 
 use pages::home::Home;
