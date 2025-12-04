@@ -82,7 +82,7 @@ ru:
           - Предложил заменить сервер БД в проекте, настроил mysql сервер под работу с высокими нагрузками.
           - Инициировал переход на непрерывную интеграцию изменений вместо релизной.
         link: null
-        technologies: ["Salt", "Prometheus", "Zabbix"]
+        technologies: ["Salt", "Linux", "Zabbix"]
       - name: "ПЕТ-ПРОЕКТЫ ДЛЯ РАЗВИТИЯ НАВЫКОВ"
         description:
           - <a href="https://github.com/itmagelab/baza" target="_blank" class="text-green-800 hover:underline font-bold">Baza</a> — мой первый собственный проект, созданный как современная альтернатива pass — консольному менеджеру паролей.
@@ -208,7 +208,7 @@ en:
           - "Proposed replacing the DB server in the project, configured the mysql server for high loads."
           - "Initiated the transition to continuous integration of changes instead of release-based."
         link: null
-        technologies: ["Salt", "Prometheus", "Zabbix"]
+        technologies: ["Salt", "Linux", "Zabbix"]
       - name: "PET PROJECTS FOR SKILL DEVELOPMENT"
         description:
           - <a href="https://github.com/itmagelab/baza" target="_blank" class="text-green-800 hover:underline font-bold">Baza</a> — my first personal project, created as a modern alternative to pass — a console-based password manager.
