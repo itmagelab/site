@@ -1,0 +1,71 @@
+# Сборка статического сайта и публикация на GitHub Pages.
+name: Deploy site to GitHub Pages
+
+on:
+    push:
+        branches: ["master", "static/v*.*.*"]
+        tags: ["v*.*.*"]
+
+    workflow_dispatch:
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+concurrency:
+    group: "pages"
+    cancel-in-progress: false
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+
+            - name: Build static site
+              run: npm run build
+
+            - name: Test and verify build
+              run: |
+                  npm test
+                  npm run check
+
+            - name: Upload artifact for GitHub Pages
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: dist
+
+    deploy:
+        needs: build
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
+
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
+
+            - name: Send Telegram message
+              if: success()
+              uses: appleboy/telegram-action@master
+              with:
+                  to: ${{ secrets.TG_CHAT_ID }}
+                  token: ${{ secrets.TG_BOT_TOKEN }}
+                  message: |
+                      ✅ Сборка прошла успешно в репозитории *${{ github.repository }}*
+
+                      🪵 Ветка: `${{ github.ref_name }}`
+                      🧩 Коммит: [${{ github.sha }}](https://github.com/${{ github.repository }}/commit/${{ github.sha }})
+                      💬 Сообщение: _${{ github.event.head_commit.message }}_

@@ -1,0 +1,422 @@
+{
+  "ru": {
+    "hero": {
+      "title": "iTMageLAB",
+      "subtitle": "Семенов Андрей Владимирович",
+      "logo": "/static/logo.png",
+      "badge": "Senior DevOps / SRE",
+      "cta_portfolio": "Смотреть портфолио",
+      "cta_contact": "Связаться со мной"
+    },
+    "about": {
+      "photo": "assets/photo.jpg",
+      "title": "Обо мне",
+      "description": "Senior DevOps, SRE с большим опытом работы в IT-индустрии.\nСпециализируюсь на администрировании Linux систем, автоматизации процессов и построении надежной инфраструктуры.\n\nСоздаю стабильные и продуктивные решения.",
+      "skills": [
+        "15+ лет опыта в администрировании Linux и UNIX систем",
+        "Настройка и поддержка сложных высоконагруженных систем",
+        "Автоматизация процессов развертывания и CI/CD",
+        "Мониторинг, логирование и обеспечение отказоустойчивости"
+      ],
+      "work_experience_title": "Опыт работы",
+      "work_experience": [
+        {
+          "year": "02.2022-...",
+          "position": "СТАРШИЙ СИСТЕМНЫЙ ИНЖЕНЕР",
+          "company": "OOO Selectel",
+          "description": [
+            "Полностью подготовил инфраструктуру для создания частного облака платформы",
+            "Отвечаю за работу openstack сервисов. В первую очередь IaC и CI/CD.",
+            "Ввел в эксплуатацию несколько сервисов Openstack.",
+            "Спроектировал систему резервного копирования.",
+            "Запустил несколько новых регионов облака.",
+            "Мною был переписан Terraform ядра облака."
+          ]
+        },
+        {
+          "year": "01.2020–02.2022",
+          "position": "СИСТЕМНЫЙ ИНЖЕНЕР",
+          "company": "G-Core Labs S.A.",
+          "description": [
+            "Отвечал за эксплуатацию работы серверного кластера Puppet, (2.5 тыс. серверов в Австралии, Южной Америке, Европе, ЮАР и России) и программных комплексов головной организации и заказчиков в СНГ, Европе и США (телекоммуникации, медицина, разработка ПО, стриминг и т.д.).",
+            "Совместно с коллегами реализовал решение, которое позволило держать код и данные на разных уровнях безопасности. Предложил выделить отдельный слой hiera для пользовательских данных с политиками ACL.",
+            "Создал сервис по получению и обновлению сертификатов с использованием внутреннего DNS API.",
+            "Добавил новую модель работы с Git, что позволило минимизировать сбои во время релиза изменений у заказчиков. Добавили новые окружения с разными наборами серверов для проведения тестирования вносимых изменений (синтаксический анализ, политики ACL и т.д.).",
+            "Сделал репозиторий для CentOS. Реализовал доступ к нему по всему миру через CDN компании и удаленного запуска нескольких серверов кэширования в каждой точке присутствия.",
+            "Инициировал переход на gitea, mariadb, pulp, gocd, borg."
+          ]
+        },
+        {
+          "year": "01.2012-11.2019",
+          "position": "СИСТЕМНЫЙ АДМИНИСТРАТОР",
+          "company": "Издательство «7 дней»",
+          "description": [
+            "Отвечал за администрирование и обслуживание внутренней инфраструктуры сайта 7days.ru (свыше 400 тыс. посетителей в день), оперативное реагирование на системные сбои и разработку решений для улучшения качества сервисов и помощь команде разработчиков в части настройки окружения."
+          ]
+        },
+        {
+          "year": "06.2009-12.2011",
+          "position": "СИСТЕМНЫЙ АДМИНИСТРАТОР",
+          "company": "Softline",
+          "description": [
+            "Отвечал за сопровождение комплекса ПО и оборудования для обеспечения режима работы серверов в режиме 24/7, поддержку систем виртуализации, сопровождение офисной LAN, добавление серверов и настройку простых кластеров с репликациями."
+          ]
+        }
+      ]
+    },
+    "portfolio": {
+      "title": "Портфолио",
+      "projects_title": "Проекты",
+      "skills_title": "Технические навыки",
+      "project_link_label": "Открыть проект",
+      "projects": [
+        {
+          "name": "УЧАСТВОВАЛ В СОЗДАНИИ НОВОГО НАПРАВЛЕНИЯ КОМПАНИИ ",
+          "description": [
+            "В организации было сформировано новое направление, которое в короткий срок должно было организовать использование основного стека компании у клиента. То есть весь стек нужно было поддерживать всего несколькими сотрудниками и научиться разбираться на уровне поддержки L2-4",
+            "Для достижения этой цели был изменен подход в IaC, внедрены новые подходы для Git Flow (IaC как релизная модель с разработкой в master и стабилизированными ветками)",
+            "Написан код для полного цикла CI/CD в закрытых контурах, всевозможные бастионы (джампы) и прокси-сервера обеспечивающие защищенный доступ.",
+            "Были развернуты комплексы для работы с инфраструктурой и кодом (Gitlab, Nexus, Zabbix и так далее), которые позволяли обеспечить работу в инфраструктуре клиента"
+          ],
+          "link": null,
+          "technologies": [
+            "Terraform",
+            "Docker",
+            "Openstack",
+            "CI/CD",
+            "Puppet"
+          ]
+        },
+        {
+          "name": "РЕОРГАНИЗАЦИЯ КОМПАНИИ ",
+          "description": [
+            "В период выделения сервисного подразделения в отдельную структуру (видеостриминговая платформа, хостинг, CDN, защита от DDoS) в течение 3 мес. провел отделение 2 тыс. серверов от структуры головной организации. На текущий момент в зоне ответственности: 2,5 тыс. серверов.",
+            "Настроил серверный кластер из 10 Puppet. Ввел в экплуатацию вместо Bare-серверов виртуальные машины с возможностью горизонтального расширения, что сократило затраты на содержание серверов.",
+            "Развернул и обеспечил поддержку системы биллинга librenms.",
+            "Настроил взаимосвязь всех частей сервиса (Puppet, БД postgres с репликацией, Nginx с кэшированием, сервер для генерации сертификатов, Memcached для хранения оперативных данных).",
+            "Реализовал перенос всей инфраструктуры из зоны DNS головной организации в новую структуру в условиях ограничения доступа к сети головной компании.",
+            "Интегрировал систему резервного копирования, рассчитал нагрузку и объем данных (передача и хранение)."
+          ],
+          "link": null,
+          "technologies": [
+            "GitLab CI",
+            "Puppet",
+            "Docker",
+            "WMWare"
+          ]
+        },
+        {
+          "name": "МАСШТАБИРОВАНИЕ ИНТЕРНЕТ-РЕСУРСА",
+          "description": [
+            "Провел ряд технологических улучшений, которые обеспечили стабильную работу рекламного сайта 7days.ru и позволили масштабировать в 5 раз число посетителей: На старте - 100 тыс/день, в итоге - ~500 тыс/день.",
+            "Полностью пересобрал парк из 50 серверов c RedHat на CentOS, решил проблему несоблюдения базовых принципов Linux.",
+            "Предложил заменить сервер БД в проекте, настроил mysql сервер под работу с высокими нагрузками.",
+            "Инициировал переход на непрерывную интеграцию изменений вместо релизной."
+          ],
+          "link": null,
+          "technologies": [
+            "Salt",
+            "Linux",
+            "Zabbix"
+          ]
+        },
+        {
+          "name": "ПЕТ-ПРОЕКТЫ ДЛЯ РАЗВИТИЯ НАВЫКОВ",
+          "description": [
+            {
+              "text": "— мой первый собственный проект, созданный как современная альтернатива pass — консольному менеджеру паролей. Разрабатывая Baza, я глубоко изучил Rust и реализовал функциональность, которая мне всегда не хватала в оригинальном инструменте, уделив особое внимание безопасности, удобству использования и качеству кода.",
+              "link": {
+                "label": "Baza",
+                "url": "https://github.com/itmagelab/baza"
+              }
+            },
+            {
+              "text": "— закрытый семейный проект, который я разработал для своей жены. Он стал для меня важным опытом, позволившим выйти за рамки низкоуровневой разработки и освоить создание полноценных пользовательских сервисов — от архитектуры до фронтенда.",
+              "link": {
+                "label": "Kubcoin",
+                "url": "https://kubcoin.ru"
+              }
+            }
+          ],
+          "link": null,
+          "technologies": [
+            "RUST",
+            "Caddy",
+            "Compose",
+            "PostgreSQL",
+            "ReDB"
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "name": "Linux Administration",
+          "level": 98
+        },
+        {
+          "name": "Docker",
+          "level": 98
+        },
+        {
+          "name": "Cloud Services",
+          "level": 95
+        },
+        {
+          "name": "CI/CD (GitLab)",
+          "level": 95
+        },
+        {
+          "name": "Terraform / IaC",
+          "level": 95
+        },
+        {
+          "name": "RUST / Ruby / Bash",
+          "level": 90
+        },
+        {
+          "name": "Monitoring (Prometheus, Grafana)",
+          "level": 85
+        },
+        {
+          "name": "Ansible / Puppet / Configuration Management",
+          "level": 95
+        }
+      ]
+    },
+    "contact": {
+      "title": "Контакты",
+      "phone": "+7 987 777 34 45",
+      "phone_label": "Телефон",
+      "email": "i@itmage.ru",
+      "email_label": "Email",
+      "social_title": "Социальные сети",
+      "social_networks": [
+        {
+          "name": "Telegram",
+          "url": "https://t.me/itmagelab",
+          "icon": "fab fa-telegram"
+        },
+        {
+          "name": "VK",
+          "url": "https://vk.com/itmage_ru",
+          "icon": "fab fa-vk"
+        }
+      ]
+    },
+    "footer": {
+      "copyright": "© 2024 iTMageLAB. Все права защищены.",
+      "credits": "Created with Rust & Yew",
+      "back_to_top": "Наверх"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "iTMageLAB",
+      "subtitle": "Andrey Semenov",
+      "logo": "/static/logo.png",
+      "badge": "Senior DevOps / SRE",
+      "cta_portfolio": "View portfolio",
+      "cta_contact": "Get in touch"
+    },
+    "about": {
+      "photo": "assets/photo.jpg",
+      "title": "About Me",
+      "description": "Senior DevOps, SRE with extensive experience in the IT industry. Specializing in Linux system administration, process automation, and building reliable infrastructure.",
+      "skills": [
+        "15+ years of experience in Linux and UNIX system administration",
+        "Configuration and support of complex high-load systems",
+        "Deployment process automation and CI/CD",
+        "Monitoring, logging, and ensuring fault tolerance"
+      ],
+      "work_experience_title": "Work Experience",
+      "work_experience": [
+        {
+          "year": "02.2022-...",
+          "position": "SENIOR SYSTEM ENGINEER",
+          "company": "OOO Selectel",
+          "description": [
+            "Fully prepared the infrastructure for creating a private cloud platform",
+            "Responsible for the operation of OpenStack services. Primarily IaC and CI/CD.",
+            "Commissioned several OpenStack services.",
+            "Designed the backup system.",
+            "Launched several new cloud regions.",
+            "Rewrote the Terraform code for the cloud core."
+          ]
+        },
+        {
+          "year": "01.2020–02.2022",
+          "position": "SYSTEM ENGINEER",
+          "company": "G-Core Labs S.A.",
+          "description": [
+            "Responsible for the operation of the Puppet server cluster (2.5k servers in Australia, South America, Europe, South Africa, and Russia) and software complexes of the headquarters and customers in the CIS, Europe, and USA (telecommunications, medicine, software development, streaming, etc.).",
+            "Together with colleagues, implemented a solution that allowed keeping code and data at different security levels. Proposed isolating a separate hiera layer for user data with ACL policies.",
+            "Created a service for obtaining and updating certificates using the internal DNS API.",
+            "Added a new Git workflow model, minimizing failures during change releases for customers. Added new environments with different server sets for testing changes (syntax analysis, ACL policies, etc.).",
+            "Created a repository for CentOS. Implemented global access via the company's CDN and remote launch of several caching servers in each point of presence.",
+            "Initiated the migration to Gitea, MariaDB, Pulp, GoCD, Borg."
+          ]
+        },
+        {
+          "year": "01.2012-11.2019",
+          "position": "SYSTEM ADMINISTRATOR",
+          "company": "7 Days Publishing House",
+          "description": [
+            "Responsible for administration and maintenance of the internal infrastructure of 7days.ru (over 400k daily visitors), rapid response to system failures, and development of solutions to improve service quality and assist the development team with environment configuration."
+          ]
+        },
+        {
+          "year": "06.2009-12.2011",
+          "position": "SYSTEM ADMINISTRATOR",
+          "company": "Softline",
+          "description": [
+            "Responsible for maintaining the software and hardware complex to ensure 24/7 server operation, virtualization system support, office LAN maintenance, adding servers, and configuring simple clusters with replication."
+          ]
+        }
+      ]
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "projects_title": "Projects",
+      "skills_title": "Technical Skills",
+      "project_link_label": "View project",
+      "projects": [
+        {
+          "name": "PARTICIPATED IN CREATING A NEW COMPANY DIRECTION",
+          "description": [
+            "A new direction was formed in the organization, which had to organize the use of the company's main stack for the client in a short time. That is, the entire stack had to be supported by only a few employees and learn to understand at the L2-4 support level.",
+            "To achieve this goal, the approach to IaC was changed, new approaches for Git Flow were introduced (IaC as a release model with development in master and stabilized branches).",
+            "Code was written for the full CI/CD cycle in closed loops, various bastions (jumps) and proxy servers ensuring secure access.",
+            "Complexes for working with infrastructure and code (Gitlab, Nexus, Zabbix, etc.) were deployed, which allowed ensuring work in the client's infrastructure."
+          ],
+          "link": null,
+          "technologies": [
+            "Terraform",
+            "Docker",
+            "Openstack",
+            "CI/CD",
+            "Puppet"
+          ]
+        },
+        {
+          "name": "COMPANY REORGANIZATION",
+          "description": [
+            "During the separation of the service division into a separate structure (video streaming platform, hosting, CDN, DDoS protection), I separated 2k servers from the head organization's structure within 3 months. Currently responsible for 2.5k servers.",
+            "Configured a server cluster of 10 Puppets. Commissioned virtual machines instead of Bare servers with the possibility of horizontal scaling, which reduced server maintenance costs.",
+            "Deployed and ensured support for the librenms billing system.",
+            "Configured the interconnection of all parts of the service (Puppet, Postgres DB with replication, Nginx with caching, certificate generation server, Memcached for storing operational data).",
+            "Implemented the transfer of the entire infrastructure from the head organization's DNS zone to a new structure under conditions of limited access to the head company's network.",
+            "Integrated a backup system, calculated the load and data volume (transfer and storage)."
+          ],
+          "link": null,
+          "technologies": [
+            "GitLab CI",
+            "Puppet",
+            "Docker",
+            "WMWare"
+          ]
+        },
+        {
+          "name": "SCALING AN INTERNET RESOURCE",
+          "description": [
+            "Conducted a number of technological improvements that ensured the stable operation of the 7days.ru advertising site and allowed scaling the number of visitors by 5 times: At the start - 100k/day, in the end - ~500k/day.",
+            "Completely reassembled a fleet of 50 servers from RedHat to CentOS, solved the problem of non-compliance with basic Linux principles.",
+            "Proposed replacing the DB server in the project, configured the mysql server for high loads.",
+            "Initiated the transition to continuous integration of changes instead of release-based."
+          ],
+          "link": null,
+          "technologies": [
+            "Salt",
+            "Linux",
+            "Zabbix"
+          ]
+        },
+        {
+          "name": "PET PROJECTS FOR SKILL DEVELOPMENT",
+          "description": [
+            {
+              "text": "— my first personal project, created as a modern alternative to pass — a console-based password manager. While developing Baza, I gained deep experience with Rust and implemented the functionality I always felt was missing in the original tool, paying special attention to security, usability, and code quality.",
+              "link": {
+                "label": "Baza",
+                "url": "https://github.com/itmagelab/baza"
+              }
+            },
+            {
+              "text": "— a private family project that I developed for my wife. It became a valuable experience that allowed me to go beyond low-level development and master creating full-fledged user-facing services — from architecture to frontend.",
+              "link": {
+                "label": "Kubcoin",
+                "url": "https://kubcoin.ru"
+              }
+            }
+          ],
+          "link": null,
+          "technologies": [
+            "RUST",
+            "Caddy",
+            "Compose",
+            "PostgreSQL",
+            "ReDB"
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "name": "Linux Administration",
+          "level": 98
+        },
+        {
+          "name": "Docker",
+          "level": 98
+        },
+        {
+          "name": "Cloud Services",
+          "level": 95
+        },
+        {
+          "name": "CI/CD (GitLab)",
+          "level": 95
+        },
+        {
+          "name": "Terraform / IaC",
+          "level": 95
+        },
+        {
+          "name": "RUST / Ruby / Bash",
+          "level": 90
+        },
+        {
+          "name": "Monitoring (Prometheus, Grafana)",
+          "level": 85
+        },
+        {
+          "name": "Ansible / Puppet / Configuration Management",
+          "level": 95
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "phone": "+7 987 777 34 45",
+      "phone_label": "Phone",
+      "email": "i@itmage.ru",
+      "email_label": "Email",
+      "social_title": "Social Networks",
+      "social_networks": [
+        {
+          "name": "Telegram",
+          "url": "https://t.me/itmagelab",
+          "icon": "fab fa-telegram"
+        },
+        {
+          "name": "VK",
+          "url": "https://vk.com/itmagelab",
+          "icon": "fab fa-vk"
+        }
+      ]
+    },
+    "footer": {
+      "copyright": "© 2024 iTMageLAB. All rights reserved.",
+      "credits": "Created with Rust & Yew",
+      "back_to_top": "Back to top"
+    }
+  }
+}
