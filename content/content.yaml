@@ -5,6 +5,9 @@ ru:
     title: "iTMageLAB"
     subtitle: "Семенов Андрей Владимирович"
     logo: "/static/logo.png"
+    badge: "Senior DevOps / SRE"
+    cta_portfolio: "Смотреть портфолио"
+    cta_contact: "Связаться со мной"
 
   about:
     photo: "/static/photo.jpg"
@@ -56,6 +59,7 @@ ru:
     title: "Портфолио"
     projects_title: "Проекты"
     skills_title: "Технические навыки"
+    project_link_label: "Открыть проект"
     projects:
       - name: "УЧАСТВОВАЛ В СОЗДАНИИ НОВОГО НАПРАВЛЕНИЯ КОМПАНИИ "
         description:
@@ -129,12 +133,16 @@ ru:
   footer:
     copyright: "© 2024 iTMageLAB. Все права защищены."
     credits: "Created with Rust & Yew"
+    back_to_top: "Наверх"
 
 en:
   hero:
     title: "iTMageLAB"
     subtitle: "Andrey Semenov"
     logo: "/static/logo.png"
+    badge: "Senior DevOps / SRE"
+    cta_portfolio: "View portfolio"
+    cta_contact: "Get in touch"
 
   about:
     photo: "/static/photo.jpg"
@@ -182,6 +190,7 @@ en:
     title: "Portfolio"
     projects_title: "Projects"
     skills_title: "Technical Skills"
+    project_link_label: "View project"
     projects:
       - name: "PARTICIPATED IN CREATING A NEW COMPANY DIRECTION"
         description:
@@ -256,3 +265,4 @@ en:
   footer:
     copyright: "© 2024 iTMageLAB. All rights reserved."
     credits: "Created with Rust & Yew"
+    back_to_top: "Back to top"

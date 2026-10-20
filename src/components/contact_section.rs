@@ -1,6 +1,6 @@
 use yew::prelude::*;
 
-use crate::content::{get_contact_content, ContactContent};
+use crate::content::{ContactContent, get_contact_content};
 
 #[derive(Properties, PartialEq)]
 pub struct Props {
@@ -12,53 +12,50 @@ pub fn contact_section(props: &Props) -> Html {
     let contact_content: &ContactContent = get_contact_content(&props.language);
 
     html! {
-        <section class="min-h-screen bg-gray-800 font-sansation py-16 px-4 flex items-center">
-            <div class="max-w-4xl mx-auto w-full text-center">
-                <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-12 text-green-300">
+        <section id="contact" class="relative px-6 py-24 sm:py-32">
+            <div class="mx-auto max-w-4xl">
+                <span class="font-mono text-sm tracking-[0.4em] text-emerald-400">{ "03" }</span>
+                <h2 class="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
                     { &contact_content.title }
                 </h2>
 
-                // Контактная информация
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                    // Телефон
-                    <div class="bg-gray-900 rounded-lg p-8 border-2 border-green-300 hover:border-green-400 transition-colors">
-                        <div class="text-green-300 mb-4">
-                            <i class="fas fa-phone text-5xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-green-300 mb-4">
+                <div class="mt-12 grid gap-6 sm:grid-cols-2">
+                    <a
+                        href={format!("tel:{}", contact_content.phone.replace(&[' ', '(', ')', '-'][..], ""))}
+                        class="group flex flex-col items-start gap-5 rounded-3xl border border-slate-800 bg-slate-900/50 p-8 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:bg-slate-900"
+                    >
+                        <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300 ring-1 ring-emerald-400/20">
+                            <i class="fas fa-phone text-lg"></i>
+                        </span>
+                        <span class="text-xs font-semibold tracking-[0.3em] text-slate-500 uppercase">
                             { &contact_content.phone_label }
-                        </h3>
-                        <a
-                            href={format!("tel:{}", contact_content.phone.replace(&[' ', '(', ')', '-'][..], ""))}
-                            class="text-xl text-gray-300 hover:text-green-300 transition-colors"
-                        >
+                        </span>
+                        <span class="text-xl font-semibold text-white transition group-hover:text-emerald-300">
                             { &contact_content.phone }
-                        </a>
-                    </div>
+                        </span>
+                    </a>
 
-                    // Email
-                    <div class="bg-gray-900 rounded-lg p-8 border-2 border-green-300 hover:border-green-400 transition-colors">
-                        <div class="text-green-300 mb-4">
-                            <i class="fas fa-envelope text-5xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-green-300 mb-4">
+                    <a
+                        href={format!("mailto:{}", contact_content.email)}
+                        class="group flex flex-col items-start gap-5 rounded-3xl border border-slate-800 bg-slate-900/50 p-8 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:bg-slate-900"
+                    >
+                        <span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300 ring-1 ring-emerald-400/20">
+                            <i class="fas fa-envelope text-lg"></i>
+                        </span>
+                        <span class="text-xs font-semibold tracking-[0.3em] text-slate-500 uppercase">
                             { &contact_content.email_label }
-                        </h3>
-                        <a
-                            href={format!("mailto:{}", contact_content.email)}
-                            class="text-xl text-gray-300 hover:text-green-300 transition-colors break-all"
-                        >
+                        </span>
+                        <span class="text-xl font-semibold break-all text-white transition group-hover:text-emerald-300">
                             { &contact_content.email }
-                        </a>
-                    </div>
+                        </span>
+                    </a>
                 </div>
 
-                // Социальные сети
-                <div>
-                    <h3 class="text-3xl font-bold text-green-300 mb-8">
+                <div class="mt-16">
+                    <h3 class="text-xs font-semibold tracking-[0.3em] text-slate-500 uppercase">
                         { &contact_content.social_title }
                     </h3>
-                    <div class="flex justify-center gap-6 flex-wrap">
+                    <div class="mt-6 flex flex-wrap gap-4">
                         {
                             contact_content.social_networks.iter().map(|social| {
                                 html! {
@@ -66,10 +63,10 @@ pub fn contact_section(props: &Props) -> Html {
                                         href={social.url.clone()}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        class="bg-gray-900 rounded-lg p-6 border-2 border-green-300 hover:border-green-400 hover:bg-gray-700 transition-all flex flex-col items-center gap-3 min-w-[120px]"
+                                        class="inline-flex items-center gap-3 rounded-2xl border border-slate-800 bg-slate-900/50 px-6 py-4 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:bg-slate-900"
                                     >
-                                        <i class={format!("{} text-5xl text-green-300", social.icon)}></i>
-                                        <span class="text-lg font-semibold text-gray-300">{ &social.name }</span>
+                                        <i class={format!("{} text-2xl text-emerald-300", social.icon)}></i>
+                                        <span class="font-medium text-slate-200">{ &social.name }</span>
                                     </a>
                                 }
                             }).collect::<Html>()
@@ -80,4 +77,3 @@ pub fn contact_section(props: &Props) -> Html {
         </section>
     }
 }
-

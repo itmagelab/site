@@ -9,76 +9,45 @@ pub struct Props {
 
 #[function_component(LanguageSwitcher)]
 pub fn language_switcher(props: &Props) -> Html {
-    let is_open = use_state(|| false);
-    let navigator = use_navigator().unwrap();
-
-    let toggle_open = {
-        let is_open = is_open.clone();
-        Callback::from(move |_| {
-            is_open.set(!*is_open);
-        })
-    };
+    let navigator = use_navigator();
 
     let on_ru = {
         let navigator = navigator.clone();
-        let is_open = is_open.clone();
         Callback::from(move |_| {
-            navigator.push(&Route::Ru);
-            is_open.set(false);
+            if let Some(navigator) = navigator.as_ref() {
+                navigator.push(&Route::Ru);
+            }
         })
     };
 
     let on_en = {
         let navigator = navigator.clone();
-        let is_open = is_open.clone();
         Callback::from(move |_| {
-            navigator.push(&Route::En);
-            is_open.set(false);
+            if let Some(navigator) = navigator.as_ref() {
+                navigator.push(&Route::En);
+            }
         })
     };
 
-    html! {
-        <div class="fixed top-4 right-4 z-50">
-            // Toggle button
-            <button
-                onclick={toggle_open}
-                class="bg-gray-800 text-green-300 px-4 py-2 rounded-lg shadow-lg font-semibold hover:bg-gray-700 transition-colors"
-            >
-                { &props.current_lang.to_uppercase() }
-                <i class="fas fa-globe ml-2"></i>
-            </button>
+    let button_class = |is_active: bool| {
+        let base = "rounded-full px-4 py-1.5 font-mono text-xs font-bold tracking-[0.2em] transition duration-300";
+        if is_active {
+            format!("{base} bg-emerald-400 text-slate-950 shadow shadow-emerald-500/30")
+        } else {
+            format!("{base} text-slate-400 hover:text-emerald-300")
+        }
+    };
 
-            // Language options (shown when open)
-            if *is_open {
-                <div class="absolute top-12 right-0 flex flex-col gap-2 bg-gray-800 rounded-lg p-2 shadow-lg">
-                    <button
-                        onclick={on_ru}
-                        class={format!(
-                            "px-4 py-2 rounded font-semibold transition-colors {}",
-                            if props.current_lang == "ru" {
-                                "bg-green-300 text-gray-800"
-                            } else {
-                                "bg-gray-700 text-green-300 hover:bg-gray-600"
-                            }
-                        )}
-                    >
-                        { "RU" }
-                    </button>
-                    <button
-                        onclick={on_en}
-                        class={format!(
-                            "px-4 py-2 rounded font-semibold transition-colors {}",
-                            if props.current_lang == "en" {
-                                "bg-green-300 text-gray-800"
-                            } else {
-                                "bg-gray-700 text-green-300 hover:bg-gray-600"
-                            }
-                        )}
-                    >
-                        { "EN" }
-                    </button>
-                </div>
-            }
+    html! {
+        <div class="fixed top-5 right-5 z-50">
+            <div class="flex items-center gap-1 rounded-full border border-slate-700/80 bg-slate-900/80 p-1 shadow-lg shadow-black/40 backdrop-blur">
+                <button type="button" onclick={on_ru} class={button_class(props.current_lang == "ru")}>
+                    { "RU" }
+                </button>
+                <button type="button" onclick={on_en} class={button_class(props.current_lang == "en")}>
+                    { "EN" }
+                </button>
+            </div>
         </div>
     }
 }

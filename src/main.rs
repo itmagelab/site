@@ -4,6 +4,7 @@ use yew_router::prelude::*;
 mod components;
 mod content;
 mod pages;
+mod utils;
 
 use pages::home::Home;
 

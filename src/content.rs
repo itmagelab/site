@@ -9,6 +9,9 @@ pub struct HeroContent {
     pub title: String,
     pub subtitle: String,
     pub logo: String,
+    pub badge: String,
+    pub cta_portfolio: String,
+    pub cta_contact: String,
 }
 
 #[derive(Deserialize, Clone, PartialEq)]
@@ -34,6 +37,7 @@ pub struct PortfolioContent {
     pub title: String,
     pub projects_title: String,
     pub skills_title: String,
+    pub project_link_label: String,
     pub projects: Vec<Project>,
     pub skills: Vec<Skill>,
 }
@@ -74,6 +78,7 @@ pub struct SocialNetwork {
 pub struct FooterContent {
     pub copyright: String,
     pub credits: String,
+    pub back_to_top: String,
 }
 
 #[derive(Deserialize, Clone, PartialEq)]
@@ -127,4 +132,74 @@ pub fn get_contact_content(lang: &str) -> &'static ContactContent {
 /// Get footer content for the specified language
 pub fn get_footer_content(lang: &str) -> &'static FooterContent {
     &get_content(lang).footer
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn content_yaml_contains_all_sections_for_both_languages() {
+        for lang in ["ru", "en"] {
+            let content = get_content(lang);
+
+            assert!(
+                !content.hero.title.is_empty(),
+                "hero.title is empty for {lang}"
+            );
+            assert!(
+                !content.hero.badge.is_empty(),
+                "hero.badge is empty for {lang}"
+            );
+            assert!(
+                !content.hero.cta_portfolio.is_empty(),
+                "hero.cta_portfolio is empty for {lang}"
+            );
+            assert!(
+                !content.hero.cta_contact.is_empty(),
+                "hero.cta_contact is empty for {lang}"
+            );
+            assert!(
+                !content.about.photo.is_empty(),
+                "about.photo is empty for {lang}"
+            );
+            assert!(
+                !content.about.work_experience.is_empty(),
+                "about.work_experience is empty for {lang}"
+            );
+            assert!(
+                !content.portfolio.projects.is_empty(),
+                "portfolio.projects is empty for {lang}"
+            );
+            assert!(
+                !content.portfolio.project_link_label.is_empty(),
+                "portfolio.project_link_label is empty for {lang}"
+            );
+            assert!(
+                !content.contact.email.is_empty(),
+                "contact.email is empty for {lang}"
+            );
+            assert!(
+                !content.footer.back_to_top.is_empty(),
+                "footer.back_to_top is empty for {lang}"
+            );
+        }
+    }
+
+    #[test]
+    fn languages_have_the_same_amount_of_content() {
+        let ru = get_content("ru");
+        let en = get_content("en");
+
+        assert_eq!(ru.portfolio.projects.len(), en.portfolio.projects.len());
+        assert_eq!(ru.portfolio.skills.len(), en.portfolio.skills.len());
+        assert_eq!(
+            ru.about.work_experience.len(),
+            en.about.work_experience.len()
+        );
+        assert_eq!(
+            ru.contact.social_networks.len(),
+            en.contact.social_networks.len()
+        );
+    }
 }
