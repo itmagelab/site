@@ -24,9 +24,12 @@ env:
 
 jobs:
   build-and-scan:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
