@@ -283,8 +283,8 @@ export function renderPage({ lang, content, base = "" }) {
         <meta name="description" content="${esc(description)}" />
         <meta name="keywords" content="${esc(META[lang])}" />
         <meta name="author" content="${esc(page.hero.subtitle)}" />
-        <meta name="theme-color" content="#05070d" media="(prefers-color-scheme: dark)" />
-        <meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#0c0b10" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#f4f0e8" media="(prefers-color-scheme: light)" />
         <meta prefix="og: https://ogp.me/ns#" property="og:type" content="website" />
         <meta prefix="og: https://ogp.me/ns#" property="og:title" content="${esc(title)}" />
         <meta prefix="og: https://ogp.me/ns#" property="og:description" content="${esc(description)}" />
