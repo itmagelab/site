@@ -141,7 +141,7 @@
               "text": "— приложение для Android, с которого я прямо с телефона диктую задачи ИИ-агенту: он предлагает план правок, показывает изменения по каждому файлу и создаёт pull request только после моего подтверждения. Распознавание голоса работает офлайн, на самом устройстве.",
               "link": {
                 "label": "VoiceIDE",
-                "url": "https://vi.0ae.ru"
+                "url": "https://voiceide.ru"
               }
             }
           ],
@@ -358,7 +358,7 @@
               "text": "— an Android app I use to dictate tasks to an AI agent right from my phone: it drafts a plan, shows the changes file by file, and opens a pull request only after I approve it. Speech recognition runs on-device, offline.",
               "link": {
                 "label": "VoiceIDE",
-                "url": "https://vi.0ae.ru"
+                "url": "https://voiceide.ru"
               }
             }
           ],
