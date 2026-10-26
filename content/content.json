@@ -212,6 +212,7 @@
     "footer": {
       "copyright": "© 2026 iTMageLAB. Все права защищены.",
       "credits": "Сайт сделан с помощью VoiceIDE",
+      "credits_url": "https://voiceide.ru",
       "back_to_top": "Наверх"
     }
   },
@@ -428,6 +429,7 @@
     "footer": {
       "copyright": "© 2026 iTMageLAB. All rights reserved.",
       "credits": "Site made with VoiceIDE",
+      "credits_url": "https://voiceide.ru",
       "back_to_top": "Back to top"
     }
   }

@@ -306,7 +306,7 @@ ${renderContact(page.contact)}
             <div class="shell footer__inner">
                 <div>
                     <p>${esc(page.footer.copyright)}</p>
-                    <p class="footer__credits">${esc(page.footer.credits)}</p>
+                    <p class="footer__credits"><a href="${esc(page.footer.credits_url)}" target="_blank" rel="noopener noreferrer">${esc(page.footer.credits)}${icons.external({ size: 12 })}</a></p>
                 </div>
                 <a href="#top">${esc(page.footer.back_to_top)}</a>
             </div>

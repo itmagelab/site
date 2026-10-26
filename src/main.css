@@ -622,6 +622,13 @@ a:hover {
     font-size: 0.74rem;
 }
 
+/* Подпись «Сделано с помощью VoiceIDE» — длинная строка-ссылка, поэтому ей
+   разрешён перенос, в отличие от коротких ссылок подвала. */
+.footer__credits a {
+    font-size: inherit;
+    white-space: normal;
+}
+
 .footer__inner a {
     font-family: var(--font-mono);
     font-size: 0.78rem;

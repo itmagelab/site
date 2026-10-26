@@ -14,7 +14,7 @@ const REQUIRED_SECTIONS = {
     about: ["photo", "title", "description", "skills", "work_experience_title", "work_experience"],
     portfolio: ["title", "projects_title", "skills_title", "projects", "skills"],
     contact: ["title", "phone", "phone_label", "email", "email_label", "social_title", "social_networks"],
-    footer: ["copyright", "credits", "back_to_top"],
+    footer: ["copyright", "credits", "credits_url", "back_to_top"],
 };
 
 const filled = (value) => (Array.isArray(value) ? value.length > 0 : isFilled(value));
