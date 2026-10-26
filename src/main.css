@@ -17,7 +17,9 @@
     --paper-deep: #ece7db;
     --ink: #1a1815;
     --ink-soft: #46423a;
-    --muted: #776f62;
+    /* Служебные подписи набраны мелко, поэтому серый приглушён ровно настолько,
+       чтобы сохранить спокойный тон и пройти по контрасту AA. */
+    --muted: #6d6558;
     --rule: #d9d3c5;
     --rule-strong: #b4ac99;
     --accent: #8f3d15;
@@ -95,6 +97,11 @@ ul,
 ol,
 figure {
     margin: 0;
+}
+
+/* Абзацы не должны заканчиваться одиноким словом на последней строке. */
+p {
+    text-wrap: pretty;
 }
 
 ul,
@@ -257,8 +264,21 @@ a:hover {
     padding: clamp(2.75rem, 9vh, 5.5rem) 0 clamp(2rem, 6vh, 3.5rem);
 }
 
+/* Первый экран набран как выходные данные документа: имя слева,
+   специализация прижата к правому краю. */
+.hero__masthead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.75rem 2rem;
+}
+
+.hero__badge {
+    padding-bottom: 0.35rem;
+}
+
 .hero__title {
-    margin-top: 0.9rem;
     font-size: var(--step-mega);
     font-weight: 600;
     letter-spacing: -0.035em;
@@ -289,9 +309,21 @@ a:hover {
     border-top: 1px solid var(--rule);
 }
 
+/* Заголовок раздела замыкается тонкой линейкой до правого края набора —
+   так же размечены главы в печатном документе. */
 .section__title {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
     font-size: var(--step-title);
     font-weight: 600;
+}
+
+.section__title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
 }
 
 .section__title + * {
@@ -318,7 +350,8 @@ a:hover {
 .about {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 15rem;
-    gap: var(--gutter);
+    column-gap: var(--gutter);
+    row-gap: 2.75rem;
     align-items: start;
 }
 
@@ -344,7 +377,7 @@ a:hover {
 
 .facts {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
     gap: 0 2.5rem;
     margin-top: 2.5rem;
     max-width: var(--measure);
@@ -498,9 +531,11 @@ a:hover {
     margin-left: 0.55rem;
 }
 
+/* Навыки разложены в две ведомости, пока для них хватает ширины:
+   длинные названия и словесный уровень остаются в одной строке. */
 .skills {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 27rem), 1fr));
     column-gap: 3rem;
 }
 
@@ -604,9 +639,9 @@ a:hover {
         max-width: 14rem;
     }
 
-    .facts,
-    .skills {
-        grid-template-columns: minmax(0, 1fr);
+    /* На узком экране подпись встаёт над именем и работает как надзаголовок. */
+    .hero__badge {
+        order: -1;
     }
 
     .job {

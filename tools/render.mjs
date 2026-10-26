@@ -77,10 +77,14 @@ function renderLines(lines) {
 function renderHero(hero, lang) {
     return `
             <section class="hero" id="hero">
+                <div class="shell hero__masthead">
+                    <div>
+                        <h1 class="hero__title">${esc(hero.title)}</h1>
+                        <p class="hero__subtitle">${esc(hero.subtitle)}</p>
+                    </div>
+                    <p class="label hero__badge">${esc(hero.badge)}</p>
+                </div>
                 <div class="shell">
-                    <p class="label">${esc(hero.badge)}</p>
-                    <h1 class="hero__title">${esc(hero.title)}</h1>
-                    <p class="hero__subtitle">${esc(hero.subtitle)}</p>
                     <nav class="hero__actions" aria-label="${esc(UI[lang].links)}">
                         <a href="#portfolio">${esc(hero.cta_portfolio)}</a>
                         <a href="#contact">${esc(hero.cta_contact)}</a>
