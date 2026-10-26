@@ -27,6 +27,17 @@ test("у языков одинаковый объём контента", () => {
     assert.equal(content.ru.contact.social_networks.length, content.en.contact.social_networks.length);
 });
 
+test("подвал ссылается на сайт VoiceIDE", () => {
+    for (const lang of ["ru", "en"]) {
+        assert.equal(content[lang].footer.credits_url, "https://voiceide.ru");
+        const html = renderPage({ lang, content });
+        assert.ok(
+            html.includes('class="footer__credits"><a href="https://voiceide.ru"'),
+            `нет ссылки на VoiceIDE в подвале «${lang}»`,
+        );
+    }
+});
+
 test("пустое поле в контенте ломает проверку", () => {
     const broken = structuredClone(content);
     broken.ru.hero.badge = "";
