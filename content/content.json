@@ -10,7 +10,7 @@
     "about": {
       "photo": "assets/photo.jpg",
       "title": "Обо мне",
-      "description": "Senior DevOps и SRE. Администрирую Linux и UNIX, автоматизирую развёртывание и поддержку инфраструктуры. Основной стек: OpenStack, Terraform, Puppet, Docker, CI/CD.",
+      "description": "Senior DevOps и SRE. Администрирую Linux и UNIX, автоматизирую развёртывание и поддержку инфраструктуры. Основной стек: OpenStack, Terraform, Puppet, Docker, Podman, Kubernetes, CI/CD.",
       "skills": [
         "15+ лет опыта в администрировании Linux и UNIX систем",
         "Настройка и поддержка сложных высоконагруженных систем",
@@ -81,6 +81,8 @@
           "technologies": [
             "Terraform",
             "Docker",
+            "Podman",
+            "Kubernetes",
             "OpenStack",
             "CI/CD",
             "Puppet"
@@ -101,6 +103,8 @@
             "GitLab CI",
             "Puppet",
             "Docker",
+            "Podman",
+            "Kubernetes",
             "VMware"
           ]
         },
@@ -162,6 +166,14 @@
         {
           "name": "Docker",
           "level": 98
+        },
+        {
+          "name": "Podman",
+          "level": 90
+        },
+        {
+          "name": "Kubernetes",
+          "level": 90
         },
         {
           "name": "Cloud Services",
@@ -227,7 +239,7 @@
     "about": {
       "photo": "assets/photo.jpg",
       "title": "About Me",
-      "description": "Senior DevOps and SRE. I run Linux and UNIX systems and automate deployment and infrastructure maintenance. Main stack: OpenStack, Terraform, Puppet, Docker, CI/CD.",
+      "description": "Senior DevOps and SRE. I run Linux and UNIX systems and automate deployment and infrastructure maintenance. Main stack: OpenStack, Terraform, Puppet, Docker, Podman, Kubernetes, CI/CD.",
       "skills": [
         "15+ years of experience in Linux and UNIX system administration",
         "Configuration and support of complex high-load systems",
@@ -298,6 +310,8 @@
           "technologies": [
             "Terraform",
             "Docker",
+            "Podman",
+            "Kubernetes",
             "OpenStack",
             "CI/CD",
             "Puppet"
@@ -318,6 +332,8 @@
             "GitLab CI",
             "Puppet",
             "Docker",
+            "Podman",
+            "Kubernetes",
             "VMware"
           ]
         },
@@ -379,6 +395,14 @@
         {
           "name": "Docker",
           "level": 98
+        },
+        {
+          "name": "Podman",
+          "level": 90
+        },
+        {
+          "name": "Kubernetes",
+          "level": 90
         },
         {
           "name": "Cloud Services",
